@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+  <h:head>
+    <title>Projetos JSF Primefaces</title>
+  </h:head>
+  <h:body>
+    <p:growl id="messages" showDetail="true" />
+    
+    <h:form id="formUpload">
+      <p:fileUpload id="fileUpload"
+                      mode="advanced"
+                      fileUploadListener="#{upload.excelUpload}"
+                      fileLimit="1"
+                      dragDropSupport="false"
+                      allowTypes="/(\.|\/)(xls|xlsx)$/"
+                      update="messages"
+                      oncomplete="updateForm();" />
+
+      <p:remoteCommand name="updateForm" update="formUpload" />
+    </h:form> 
+  </h:body>
+</html>
+
