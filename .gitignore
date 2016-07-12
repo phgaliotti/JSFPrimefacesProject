@@ -1,0 +1,16 @@
+build
+nbproject
+test
+conf
+META-INF
+WEB-INF
+build.xml
+*.cfg.xml
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
